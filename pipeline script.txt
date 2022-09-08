@@ -1,6 +1,22 @@
-def call(def usernameinputvalue)
-{
-  echo "my name is $(usernameinputvalue)"
-}
+pipeline {
+    agent any
 
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building..'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
+    }
+}
   
